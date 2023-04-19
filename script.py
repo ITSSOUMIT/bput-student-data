@@ -15,10 +15,13 @@ sys.stdout = open("log.txt", "w")
 
 def scrap(usernameinp, passwordinp):
     # Create a new instance of the Chrome driver
-    options = Options()
-    options.headless = True
 
+    # headless chrome
+    options = Options()
+    options.add_argument("--headless=new")
     driver = webdriver.Chrome(options=options)
+
+    # gui chrome
     # driver = webdriver.Chrome()
     # driver.maximize_window()
 
