@@ -80,7 +80,7 @@ def scrap(usernameinp, passwordinp):
         webtable_df.to_csv(f'output/{regno}.csv')
         print(f'{usernameinp} : Done')
     except NoSuchElementException:
-        print(f"Details for {usernameinp} does not exist")
+        print(f"{usernameinp} : Details doesnot exist")
 
     # Close the browser window
     driver.quit()
